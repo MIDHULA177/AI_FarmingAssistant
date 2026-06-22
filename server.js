@@ -12,6 +12,9 @@ const PORT = process.env.PORT || 5000;
 app.use(cors());
 app.use(express.json());
 
+// Root route
+app.get('/', (req, res) => res.send('KrishiAI Backend is Running 🚀'));
+
 // Health check
 app.get('/health', (req, res) => res.json({ status: 'ok' }));
 
